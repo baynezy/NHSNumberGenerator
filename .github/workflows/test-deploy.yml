@@ -27,9 +27,9 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Run tests
-      run: dotnet test --logger "junit;LogFileName=results.xml"
+      run: dotnet test --logger "xunit;LogFileName=results.xml"
     - name: Publish Unit Test Results
       uses: EnricoMi/publish-unit-test-result-action/composite@v2
       if: ${{ github.actor != 'dependabot[bot]' }}
       with:
-        files: "**/TestResults/*.xml"
+        xunit_files: "**/TestResults/*.xml"
