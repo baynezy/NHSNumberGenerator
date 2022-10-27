@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+      <Authors>Simon Baynes</Authors>
+      <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+      <PackageProjectUrl>https://github.com/baynezy/NHSNumberGenerator</PackageProjectUrl>
+      <Description>A .Net library for generating NHS Numbers in the correct format</Description>
+      <Copyright>© Simon Baynes 2022</Copyright>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
