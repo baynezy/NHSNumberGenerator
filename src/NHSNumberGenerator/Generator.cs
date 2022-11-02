@@ -4,6 +4,10 @@ namespace NHSNumberGenerator;
 
 public static class Generator
 {
+    /// <summary>
+    /// Generates a random NHS number in a valid format
+    /// </summary>
+    /// <returns>A random NHS number in a valid format</returns>
     public static string Generate()
     {
         var number = new NhsNumber();

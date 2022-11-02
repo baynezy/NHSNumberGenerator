@@ -1,14 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-      <Authors>Simon Baynes</Authors>
-      <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-      <PackageProjectUrl>https://github.com/baynezy/NHSNumberGenerator</PackageProjectUrl>
-      <Description>A .Net library for generating NHS Numbers in the correct format</Description>
-      <Copyright>© Simon Baynes 2022</Copyright>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Authors>Simon Baynes</Authors>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/baynezy/NHSNumberGenerator</PackageProjectUrl>
+        <Description>A .Net library for generating NHS Numbers in the correct format</Description>
+        <Copyright>© Simon Baynes 2022</Copyright>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PackageReadmeFile>README.md</PackageReadmeFile> <!--https://docs.microsoft.com/en-gb/nuget/reference/msbuild-targets#packagereadmefile -->
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="../../README.md" Pack="true" PackagePath="/"/>
+    </ItemGroup>
 
 </Project>

@@ -11,7 +11,7 @@ public class GeneratorFeatureSteps
     [Given(@"A single NHS Number")]
     public void GivenASingleNhsNumber()
     {
-        _generated.Add(Generator.Generate());
+        GivenNhsNumbers(1);
     }
 
     [Then(@"NHS Number should be valid")]
@@ -30,8 +30,7 @@ public class GeneratorFeatureSteps
     [Given(@"Two different NHS Numbers are generated")]
     public void GivenTwoDifferentNhsNumbersAreGenerated()
     {
-        _generated.Add(Generator.Generate());
-        _generated.Add(Generator.Generate());
+        GivenNhsNumbers(2);
     }
 
     [Then(@"NHS Numbers should be valid")]
@@ -54,5 +53,14 @@ public class GeneratorFeatureSteps
 
             duplicateChecker.Add(nhsNumber, true);
         });
+    }
+
+    [Given(@"(.*) NHS Number\(s\)")]
+    public void GivenNhsNumbers(int howMany)
+    {
+        for (var i = 0; i < howMany; i++)
+        {
+            _generated.Add(Generator.Generate());
+        }
     }
 }
