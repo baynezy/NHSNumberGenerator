@@ -13,3 +13,9 @@ The library is available on NuGet:
 ```powershell
 dotnet add package NHSNumberGenerator
 ```
+
+## Usage
+
+```csharp
+var nhsNumber = Generator.Generate();
+```
