@@ -1,7 +1,7 @@
 name: Test and Deploy Library
 
 env:
-  VERSION_NUMBER: 1.0.1
+  VERSION_NUMBER: 1.0.2
   NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
 
 on:
@@ -9,9 +9,7 @@ on:
     branches:
     - master
     - develop
-    - feature/*
     - release/*
-    - hotfix/*
   pull_request:
     branches: [ develop ]
 
@@ -43,7 +41,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 6.0.x
       - name: Output Version Number

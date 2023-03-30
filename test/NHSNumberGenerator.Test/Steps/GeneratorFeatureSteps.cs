@@ -9,16 +9,10 @@ public class GeneratorFeatureSteps
     private readonly List<string> _generated = new();
 
     [Given(@"A single NHS Number")]
-    public void GivenASingleNhsNumber()
-    {
-        GivenNhsNumbers(1);
-    }
+    public void GivenASingleNhsNumber() => GivenNhsNumbers(1);
 
     [Then(@"NHS Number should be valid")]
-    public void ThenNhsNumberShouldBeValid()
-    {
-        ValidateNhsNumber(_generated.First());
-    }
+    public void ThenNhsNumberShouldBeValid() => ValidateNhsNumber(_generated.First());
 
     private static void ValidateNhsNumber(string nhsNumber)
     {
@@ -28,16 +22,10 @@ public class GeneratorFeatureSteps
     }
 
     [Given(@"Two different NHS Numbers are generated")]
-    public void GivenTwoDifferentNhsNumbersAreGenerated()
-    {
-        GivenNhsNumbers(2);
-    }
+    public void GivenTwoDifferentNhsNumbersAreGenerated() => GivenNhsNumbers(2);
 
     [Then(@"NHS Numbers should be valid")]
-    public void ThenNhsNumbersShouldBeValid()
-    {
-        _generated.ForEach(ValidateNhsNumber);
-    }
+    public void ThenNhsNumbersShouldBeValid() => _generated.ForEach(ValidateNhsNumber);
 
     [Then(@"NHS Numbers should be different")]
     public void ThenNhsNumbersShouldBeDifferent()
