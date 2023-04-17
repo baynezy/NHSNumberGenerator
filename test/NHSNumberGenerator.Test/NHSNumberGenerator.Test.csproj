@@ -13,7 +13,7 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
         <PackageReference Include="NHSNumberValidator" Version="1.0.4.110" />
-        <PackageReference Include="Shouldly" Version="4.1.0" />
+        <PackageReference Include="Shouldly" Version="4.2.0" />
         <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
         <PackageReference Include="SpecFlow.xUnit" Version="3.9.74" />
         <PackageReference Include="xunit" Version="2.4.2" />
