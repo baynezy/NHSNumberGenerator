@@ -54,12 +54,18 @@ public static class Generator
         private class NumberPart
         {
             internal int Number { get; init; }
+            
             internal int Factor { get; init; }
+
+            public int Calculate()
+            {
+                return Number * Factor;
+            }
         }
 
         internal string Calculate()
         {
-            var total = _numberParts.Sum(part => part.Number * part.Factor);
+            var total = _numberParts.Sum(part => part.Calculate());
             var remainder = total % 11;
             
             var checkDigit = (remainder == 0) ? 0 : 11 - remainder;
