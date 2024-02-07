@@ -11,7 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
         <PackageReference Include="NHSNumberValidator" Version="1.0.4.110" />
         <PackageReference Include="Shouldly" Version="4.2.1" />
         <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
