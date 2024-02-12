@@ -14,7 +14,7 @@ public static class Generator
         return number.Calculate();
     }
 
-    private class NhsNumber
+    private sealed class NhsNumber
     {
 
         private readonly Random _random = new();
@@ -51,13 +51,13 @@ public static class Generator
             return _random.Next(0, 10);
         }
 
-        private class NumberPart
+        private sealed class NumberPart
         {
             internal int Number { get; init; }
             
             internal int Factor { get; init; }
 
-            public int Calculate()
+            internal int Calculate()
             {
                 return Number * Factor;
             }
