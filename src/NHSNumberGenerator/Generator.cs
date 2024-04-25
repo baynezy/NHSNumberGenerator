@@ -14,13 +14,13 @@ public static class Generator
         return number.Calculate();
     }
 
-    private class NhsNumber
+    private sealed class NhsNumber
     {
 
         private readonly Random _random = new();
         private const int NhsNumberSegments = 9;
         private List<NumberPart> _numberParts = null!;
-        private readonly int[] _weightings = {10,9,8,7,6,5,4,3,2};
+        private readonly int[] _weightings = [10,9,8,7,6,5,4,3,2];
 
 
         internal NhsNumber()
@@ -30,7 +30,7 @@ public static class Generator
 
         private void InitialiseParts()
         {
-            _numberParts = new List<NumberPart>();
+            _numberParts = [];
             for (var position = 0; position < NhsNumberSegments; position++)
             {
                 _numberParts.Add(new NumberPart
@@ -51,15 +51,21 @@ public static class Generator
             return _random.Next(0, 10);
         }
 
-        private class NumberPart
+        private sealed class NumberPart
         {
             internal int Number { get; init; }
+            
             internal int Factor { get; init; }
+
+            internal int Calculate()
+            {
+                return Number * Factor;
+            }
         }
 
         internal string Calculate()
         {
-            var total = _numberParts.Sum(part => part.Number * part.Factor);
+            var total = _numberParts.Sum(part => part.Calculate());
             var remainder = total % 11;
             
             var checkDigit = (remainder == 0) ? 0 : 11 - remainder;

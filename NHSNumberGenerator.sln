@@ -11,6 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0E30007D-D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHSNumberGenerator.Test", "test\NHSNumberGenerator.Test\NHSNumberGenerator.Test.csproj", "{209FB13C-9BEE-4EFE-B88E-9A33246E743F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{296C7081-313C-4AEB-BFD5-1F378D0432D2}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		.gitmessage = .gitmessage
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+		build.cake = build.cake
+		CHANGELOG.md = CHANGELOG.md
+		semver.json = semver.json
+		.cm\gitstream.cm = .cm\gitstream.cm
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

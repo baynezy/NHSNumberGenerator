@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
@@ -11,24 +11,40 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
-        <PackageReference Include="NHSNumberValidator" Version="1.0.3.87" />
-        <PackageReference Include="Shouldly" Version="4.1.0" />
+        <PackageReference Include="JunitXml.TestLogger" Version="3.1.12" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+        <PackageReference Include="NHSNumberValidator" Version="1.0.4.110" />
+        <PackageReference Include="Shouldly" Version="4.2.1" />
         <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
         <PackageReference Include="SpecFlow.xUnit" Version="3.9.74" />
-        <PackageReference Include="xunit" Version="2.4.2" />
-        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+        <PackageReference Include="xunit" Version="2.7.1" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.5.8">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="FluentAssertions" Version="6.10.0" />
-        <PackageReference Include="XunitXml.TestLogger" Version="3.0.78" />
+        <PackageReference Include="FluentAssertions" Version="6.12.0" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\..\src\NHSNumberGenerator\NHSNumberGenerator.csproj" />
       <Folder Include="Features" />
       <Folder Include="Steps" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <SpecFlowFeatureFiles Remove="TestResults\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="TestResults\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="TestResults\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="TestResults\**" />
     </ItemGroup>
 
 </Project>
