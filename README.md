@@ -1,8 +1,12 @@
 # NHS Number Generator
 
-This project is a .Net library to generate NHS numbers in the alid format.
+This project is a .Net library to generate NHS numbers in the valid format.
 
-[![Build Status](https://github.com/baynezy/NHSNumberGenerator/workflows/Test%20and%20Deploy%20Library/badge.svg)](https://github.com/baynezy/NHSNumberGenerator/actions?query=workflow%3ATest%20and%20Deploy%20Library)
+
+| Branch    | Status                                                                                                                                                                                                        |
+|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `master`  | [![master](https://github.com/baynezy/NHSNumberGenerator/actions/workflows/branch-master.yml/badge.svg?branch=master)](https://github.com/baynezy/NHSNumberGenerator/actions/workflows/branch-master.yml)     |
+| `develop` | [![develop](https://github.com/baynezy/NHSNumberGenerator/actions/workflows/branch-develop.yml/badge.svg?branch=develop)](https://github.com/baynezy/NHSNumberGenerator/actions/workflows/branch-develop.yml) |
 
 ## Installation
 
