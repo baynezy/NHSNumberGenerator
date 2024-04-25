@@ -6,7 +6,7 @@ namespace NHSNumberGenerator.Test.Steps;
 [Binding]
 public class GeneratorFeatureSteps
 {
-    private readonly List<string> _generated = new();
+    private readonly List<string> _generated = [];
 
     [Given(@"A single NHS Number")]
     public void GivenASingleNhsNumber() => GivenNhsNumbers(1);
@@ -34,12 +34,10 @@ public class GeneratorFeatureSteps
         
         _generated.ForEach(nhsNumber =>
         {
-            if (duplicateChecker.ContainsKey(nhsNumber))
+            if (!duplicateChecker.TryAdd(nhsNumber, true))
             {
                 throw new Exception($"Duplicate NHS Number found: {nhsNumber}");
             }
-
-            duplicateChecker.Add(nhsNumber, true);
         });
     }
 
