@@ -20,7 +20,7 @@ public static class Generator
         private readonly Random _random = new();
         private const int NhsNumberSegments = 9;
         private List<NumberPart> _numberParts = null!;
-        private readonly int[] _weightings = {10,9,8,7,6,5,4,3,2};
+        private readonly int[] _weightings = [10,9,8,7,6,5,4,3,2];
 
 
         internal NhsNumber()
@@ -30,7 +30,7 @@ public static class Generator
 
         private void InitialiseParts()
         {
-            _numberParts = new List<NumberPart>();
+            _numberParts = [];
             for (var position = 0; position < NhsNumberSegments; position++)
             {
                 _numberParts.Add(new NumberPart
