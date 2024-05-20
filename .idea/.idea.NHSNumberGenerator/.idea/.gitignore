@@ -11,5 +11,13 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
 # User Defined
 riderMarkupCache.xml
+
+# Sonarqube
+/sonarlint/
+sonarlint.xml
+
+# GitHub Copilot persisted chat sessions
+/copilot/chatSessions

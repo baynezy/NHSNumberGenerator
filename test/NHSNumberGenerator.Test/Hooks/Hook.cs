@@ -1,7 +1,4 @@
-namespace NHSNumberGenerator.Test.Hooks
-{
-    [Binding]
-    public class Hooks
-    {
-    }
-}
+namespace NHSNumberGenerator.Test.Hooks;
+
+[Binding]
+public class Hooks;
