@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="JunitXml.TestLogger" Version="5.0.0" />
+        <PackageReference Include="JunitXml.TestLogger" Version="6.0.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
         <PackageReference Include="NHSNumberValidator" Version="2.0.2.2" />
         <PackageReference Include="Reqnroll.xUnit" Version="2.3.0" />
